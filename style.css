@@ -1,0 +1,478 @@
+/* Web Fonts */
+@font-face {
+  font-family: 'Merienda One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/meriendaone/v16/H4cgBXaMndbflEq6kyZ1ht6ohYaz.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v12/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhLsWkANDJ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v12/jizMREVItHgc8qDIbSTKq4XkRiUawTk7f45UM9y05oZ8RODLR-Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v12/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Universal */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  background-color: #A948DB;
+}
+
+/* Header */
+header,
+footer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 89px;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+header .nav-bar {
+  align-self: flex-end;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li {
+  /* display: inline-block; */
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  header ul {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .nav-bar ul li {
+    padding: 0;
+  }
+}
+
+.nav-bar a {
+  color: #D3FF33;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+
+/* Splash Section */
+#splash {
+  box-sizing: border-box;
+  height: 31.25rem;
+  background-image: url("images/cycling-club-event-cropped.jpg");
+  background-size: cover;
+  background-position-y: 25%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 15rem;
+}
+
+h1 {
+  color: #D3FF33;
+  font-family: 'Merienda One', cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: #A948DBD9; /* D9 is 85% opacity. */
+  padding: 0.5rem;
+}
+
+/* Intro Section */
+#intro {
+  height: 8rem;
+  padding: 2.5rem;
+  color: #D3FF33;
+}
+
+@media only screen and (max-width: 675px) {
+  #intro {
+    height: 9.5rem;
+  }
+}
+
+#intro h2 {
+  padding-bottom: 1rem;
+  word-spacing: 0.125rem;
+  display: inline-block;
+}
+
+#intro h2 em {
+  color: #ADDB01;
+}
+
+@media only screen and (max-width: 480px) {
+  #intro {
+    height: 12.3125rem;
+  }
+  #intro h2 {
+    display: block;
+  }
+}
+
+#intro h3 {
+  padding: 0.5rem 0 1rem;
+  color: #FFF;
+  font-weight: 400;
+  word-spacing: 1px;
+}
+
+@media only screen and (max-width: 400px) {
+  #intro h2 {
+    font-size: 1.3125rem;
+  }
+  #intro h3 {
+    font-size: 1rem;
+  }
+}
+
+/* 1st Pics Section [with Flexbox] */
+#pics-1st-group {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3.5%;
+}
+
+#pics-1st-group img {
+  width: 31%;
+}
+
+@media only screen and (max-width: 480px) {
+  #pics-1st-group {
+    flex-direction: column;
+    padding-bottom: 10%;
+  }
+  #pics-1st-group img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Testimonial Section */
+div#quote {
+  background-image: url("images/gears-chain-1280x853.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 18rem;
+  position: relative;
+}
+
+div#quote-content::before {
+  background-color: #708F007F; /* 7F is 50% opacity. */
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 18rem;
+}
+
+div#quote-content * {
+  position: relative;
+  line-height: 1.5;
+}
+
+#remark {
+  padding: 3rem 1.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #FFF;
+  text-shadow: 2px 2px 2px black;
+}
+
+#credit {
+  padding: 1.5rem;
+  padding-top: 0;
+  font-size: 1.25rem;
+  text-align: right;
+  color: #D3FF33;
+  text-shadow: 2px 2px 2px black;
+}
+
+@media only screen and (max-width: 750px) {
+  #remark {
+    font-size: 1.25rem;
+  }
+  #credit {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #remark {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  div#quote {
+    height: 19.5rem;
+  }
+  div#quote-content::before {
+    height: 19.5rem;
+  }
+}
+
+/* 2nd Pics Section [with Grid] */
+#pics-2nd-group {
+  width: 100%;
+  display: grid;
+  grid-template: repeat(4, 18.35vw) / repeat(5, 1fr);
+  gap: 1%;
+  margin: 1% auto;
+}
+
+.grid-item  {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+#pic-1 {
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+#pic-2 {
+  grid-area: 1 / 2 / span 1 / span 2;
+}
+#pic-3 {
+  grid-area: 1 / 4 / span 1 / span 1;
+}
+#pic-4 {
+  grid-area: 1 / 5 / span 2 / span 1;
+}
+#pic-5 {
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+#pic-6 {
+  grid-area: 2 / 2 / span 2 / span 1;
+}
+#pic-6 img {
+  object-position: right;
+}
+#pic-7 {
+  grid-area: 2 / 3 / span 1 / span 2;
+}
+#pic-7 img {
+  object-position: right 65%;
+}
+#pic-8 {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+#pic-9 {
+  grid-area: 3 / 4 / span 1 / span 2;
+}
+#pic-9 img {
+  object-position: right 35%;
+}
+#pic-10 {
+  grid-area: 4 / 1 / span 1 / span 2;
+}
+#pic-11 {
+  grid-area: 4 / 3 / span 1 / span 2;
+}
+#pic-12 {
+  grid-area: 4 / 5 / span 1 / span 1;
+}
+
+/* One Image and CTA Section */
+section#image-cta {
+  padding: 3rem 1.20rem 1.5rem;
+}
+
+#image-cta h2 {
+  color: #D3FF33;
+  word-spacing: 0.125rem;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+div#final-image {
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto 2.25rem;
+}
+
+@media only screen and (max-width: 480px) {
+  section#image-cta {
+    padding-top: 1.5rem;
+  }
+  div#final-image {
+    width: 80%;
+  }
+}
+
+div#final-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#cta p {
+  text-align: center;
+  color: #FFF;
+  font: 1.2rem;
+  line-height: 1.4;
+}
+
+#cta form {
+  padding: 1rem;
+  text-align: center;
+}
+
+#cta form div {
+  display: inline-block;
+}
+
+#cta label {
+  color: #D3FF33;
+  padding: 0.25rem;
+}
+
+#cta #name, #cta #email {
+  padding: 0.25rem;
+  background-color: #ADDB01;
+  color: #630D8F;
+}
+
+#cta #name:focus, #cta #email:focus {
+  border-color: #630D8F;
+}
+
+#cta #submit {
+  padding: 0.5rem;
+  margin-left: 1.5rem;
+  background-color: #ADDB01;
+  color: #630D8F;
+}
+
+@media only screen and (max-width: 750px) {
+  #cta form {
+    width: 15.625rem;
+    margin: 0 auto;
+  }
+  #cta form div {
+    display: block;
+    padding: 0.25rem 0;
+    text-align: right;
+  }
+  #cta #submit {
+    margin-left: 0;
+  }
+  #cta form div.submit {
+    text-align: center;
+  }
+}
+
+#cta #submit:focus {
+  border-color: #630D8F;
+}
+
+#cta #submit:hover {
+  background-color: #708F00;
+  color: #FFF;
+}
+
+section#image-cta nav {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+nav a {
+  color: #ADDB01;
+}
+
+nav a:hover {
+  color: #FFF;
+}
+
+/* Footer */
+footer {  /* other footer styling is in header styling */
+  background-color: #630D8F;
+  color: #FFF;
+  height: 70px;
+}
+
+footer > p {
+  font-family: 'Merienda One', cursive;
+  font-size: 1.2rem;
+}
+
+footer div p {
+  text-align: right;
+}
+
+@media only screen and (max-width: 550px) {
+  footer > p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  footer div p {
+    font-size: 0.8125rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  footer > p {
+    font-size: 0.8125rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  footer {
+    height: 82px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer div p {
+    text-align: center;
+  }
+}
