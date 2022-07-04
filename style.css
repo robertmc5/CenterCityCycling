@@ -362,7 +362,7 @@ div#final-image img {
 }
 
 #cta form {
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -401,6 +401,9 @@ div#final-image img {
     display: block;
     padding: 0.25rem 0;
     text-align: right;
+  }
+  #cta #name, #cta #email {
+    width: 141px;
   }
   #cta #submit {
     margin-left: 0;
