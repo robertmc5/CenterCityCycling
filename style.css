@@ -45,6 +45,9 @@ html {
 body {
   font-family: 'Libre Franklin', sans-serif;
   background-color: #A948DB;
+  min-width: 20rem;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 /* Header */
